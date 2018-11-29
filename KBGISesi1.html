@@ -305,25 +305,25 @@ $(document).ready(function() {
     $("#resetButton").removeAttr("disabled");
 
     timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-    if($('#statusTimer1').val() == 1){
+    if($('#statusTimer2').val() == 1){
       timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer2').val() == 2){
+    if($('#statusTimer1').val() == 1){
       timer2.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer3').val() == 3){
+    if($('#statusTimer3').val() == 1){
       timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer4').val() == 4){
+    if($('#statusTimer4').val() == 1){
       timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer5').val() == 5){
+    if($('#statusTimer5').val() == 1){
       timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer6').val() == 6){
+    if($('#statusTimer6').val() == 1){
       timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
-    if($('#statusTimer7').val() == 7){
+    if($('#statusTimer7').val() == 1){
       timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
     }
   });
@@ -332,13 +332,13 @@ $(document).ready(function() {
   $(' .pauseButton').click(function () {
     $("#startButton").html('Resume All');
     timer.pause({precision: 'secondTenths'});
-    timer1.pause({precision: 'secondTenths'});
-    timer2.pause({precision: 'secondTenths'});
-    timer3.pause({precision: 'secondTenths'});
-    timer4.pause({precision: 'secondTenths'});
-    timer5.pause({precision: 'secondTenths'});
-    timer6.pause({precision: 'secondTenths'});
-    timer7.pause({precision: 'secondTenths'});
+    timer1.pause({precision: 'secondTenths'});$("#startTimer1").removeAttr("disabled").html('Resume');$("#pauseTimer1").attr("disabled", "");$("#stopTimer1").attr("disabled", "");
+    timer2.pause({precision: 'secondTenths'});$("#startTimer2").removeAttr("disabled").html('Resume');$("#pauseTimer2").attr("disabled", "");$("#stopTimer2").attr("disabled", "");
+    timer3.pause({precision: 'secondTenths'});$("#startTimer3").removeAttr("disabled").html('Resume');$("#pauseTimer3").attr("disabled", "");$("#stopTimer3").attr("disabled", "");
+    timer4.pause({precision: 'secondTenths'});$("#startTimer4").removeAttr("disabled").html('Resume');$("#pauseTimer4").attr("disabled", "");$("#stopTimer4").attr("disabled", "");
+    timer5.pause({precision: 'secondTenths'});$("#startTimer5").removeAttr("disabled").html('Resume');$("#pauseTimer5").attr("disabled", "");$("#stopTimer5").attr("disabled", "");
+    timer6.pause({precision: 'secondTenths'});$("#startTimer6").removeAttr("disabled").html('Resume');$("#pauseTimer6").attr("disabled", "");$("#stopTimer6").attr("disabled", "");
+    timer7.pause({precision: 'secondTenths'});$("#startTimer7").removeAttr("disabled").html('Resume');$("#pauseTimer7").attr("disabled", "");$("#stopTimer7").attr("disabled", "");
   });
          
   
