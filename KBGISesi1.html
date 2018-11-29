@@ -155,6 +155,8 @@
                               <div  class="col-6 col-md-auto ">
                                 <button id="startTimer2" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
                                 <button id="pauseTimer2" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                <button id="stopTimer2" type="button"  class="btn btn-md btn-danger">Stop</button>
+                                <input id="statusTimer2" type="hidden" value="1">
                               </div>
                             </div>
                           </div>
@@ -190,6 +192,8 @@
                               <div  class="col-6 col-md-auto ">
                                 <button id="startTimer3" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
                                 <button id="pauseTimer3" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                <button id="stopTimer3" type="button"  class="btn btn-md btn-danger">Stop</button>
+                                <input id="statusTimer3" type="hidden" value="1">
                               </div>
                             </div>
                           </div>
@@ -227,6 +231,8 @@
                               <div  class="col-6 col-md-auto ">
                                 <button id="startTimer5" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
                                 <button id="pauseTimer5" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                <button id="stopTimer5" type="button"  class="btn btn-md btn-danger">Stop</button>
+                                <input id="statusTimer5" type="hidden" value="1">
                               </div>
                             </div>
                           </div>
@@ -262,6 +268,8 @@
                               <div  class="col-6 col-md-auto ">
                                 <button id="startTimer4" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
                                 <button id="pauseTimer4" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                <button id="stopTimer4" type="button"  class="btn btn-md btn-danger">Stop</button>
+                                <input id="statusTimer4" type="hidden" value="1">
                               </div>
                             </div>
                           </div>
@@ -281,6 +289,7 @@
 </html>
 <script>
   $(document).ready(function() {
+    var maxcount = 10800; //satuan detik
   	var timer = new Timer();
   	var timer1 = new Timer();
   	var timer2 = new Timer();
@@ -298,18 +307,18 @@
   		$("#stopButton").removeAttr("disabled");
   		$("#resetButton").removeAttr("disabled");
   
-  		timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+  		timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
       
       if($('#statusTimer1').val() == 1){
-        timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+        timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
       }
 
-      timer2.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
-  		timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
-  		timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
-  		timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
-  		timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
-  		timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+      timer2.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+  		timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+  		timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+  		timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+  		timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+  		timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
   
   	});
   
@@ -328,28 +337,19 @@
          
   
   $(' .stopButton').click(function () {
-  timer.stop({precision: 'secondTenths'});
-  timer1.stop({precision: 'secondTenths'});
-  timer2.stop({precision: 'secondTenths'});
-  timer3.stop({precision: 'secondTenths'});
-  timer4.stop({precision: 'secondTenths'});
-  timer5.stop({precision: 'secondTenths'});
-  timer6.stop({precision: 'secondTenths'});
-  timer7.stop({precision: 'secondTenths'});
+    timer.stop({precision: 'secondTenths'});
+    timer1.stop({precision: 'secondTenths'});$('#statusTimer1').val('1');
+    timer2.stop({precision: 'secondTenths'});$('#statusTimer2').val('1');
+    timer3.stop({precision: 'secondTenths'});$('#statusTimer3').val('1');
+    timer4.stop({precision: 'secondTenths'});$('#statusTimer4').val('1');
+    timer5.stop({precision: 'secondTenths'});$('#statusTimer5').val('1');
+    timer6.stop({precision: 'secondTenths'});$('#statusTimer6').val('1');
+    timer7.stop({precision: 'secondTenths'});$('#statusTimer7').val('1');
   });
          
-  	$(' .resetButton').click(function () {
-             location.reload();
-  
-            // timer.reset({precision: 'secondTenths'});
-            // timer1.reset({precision: 'secondTenths'});
-  	//	timer2.reset({precision: 'secondTenths'});
-  	//	timer3.reset({precision: 'secondTenths'});
-  		//timer4.reset({precision: 'secondTenths'});
-  		//timer5.reset({precision: 'secondTenths'});
-  		//timer6.reset({precision: 'secondTenths'});
-  		//timer7.reset({precision: 'secondTenths'});
-  	});
+  $(' .resetButton').click(function () {
+    location.reload();
+  });
   
   	/////////////////////////////////         Start section   ////////////////////////////////////////
   
@@ -373,16 +373,17 @@
   		$('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
   	});
          
-         timer5.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
+    timer5.addEventListener('secondTenthsUpdated', function (e) {
+      $('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+    });
          
-         timer6.addEventListener('secondTenthsUpdated', function (e) {
+    timer6.addEventListener('secondTenthsUpdated', function (e) {
   		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-      timer7.addEventListener('secondTenthsUpdated', function (e) {
-  $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  });
+    });
+    
+    timer7.addEventListener('secondTenthsUpdated', function (e) {
+      $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+    });
   	
   	/////////////////////////////////         Start section   ////////////////////////////////////////
   
@@ -409,41 +410,38 @@
   	timer6.addEventListener('started', function (e) {
   		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
   	});
-      timer7.addEventListener('started', function (e) {
-  $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  });
-  
-  
-  
-  
-  	timer.addEventListener('reset', function (e) {
-  		//$('#topTimer .values').html(timer.getTimeValues().toString());
-  		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  
-         });
-         
-  
-         function start(){
-             
-         }
-  
-  
-         ///////////////////////// area timer1 ///////////////////////////
-          $('#startTimer1').click(function () {
-            timer1.start({precision: 'secondTenths'});
-          });
-  
-          $('#pauseTimer1').click(function () {
-            $("#startTimer1").html('Resume');
-            $("#startTimer1").removeAttr("disabled");
-            timer1.pause({precision: 'secondTenths'});
-          });
+    timer7.addEventListener('started', function (e) {
+      $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+    });
 
-          $('#stopTimer1').click(function () {
-            $('#statusTimer1').val('0');
-            timer1.stop({precision: 'secondTenths'});
-          });
-         ///////////////////////// ////////// ///////////////////////////
+  	timer.addEventListener('reset', function (e) {
+      $('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+    });
+
+  
+    ///////////////////////// area timer1 ///////////////////////////
+    $('#startTimer1').click(function () {
+      timer1.start({precision: 'secondTenths'});
+      $("#pauseTimer1").removeAttr("disabled");
+      $("#stopTimer1").removeAttr("disabled");
+      $('#statusTimer1').val('1');
+    });
+
+    $('#pauseTimer1').click(function () {
+      $("#startTimer1").html('Resume');
+      $("#startTimer1").removeAttr("disabled");
+      timer1.pause({precision: 'secondTenths'});
+    });
+
+    $('#stopTimer1').click(function () {
+      $('#statusTimer1').val('0');
+      $("#startTimer1").removeAttr("disabled");
+      $("#startTimer1").html('Start');
+      $("#pauseTimer1").attr("disabled", "");
+      $("#stopTimer1").attr("disabled", "");
+      timer1.stop({precision: 'secondTenths'});
+    });
+    ///////////////////////// ////////// ///////////////////////////
   
          ///////////////////////// area timer2 ///////////////////////////
          $('#startTimer2').click(function () {
