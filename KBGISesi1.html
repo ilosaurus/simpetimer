@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="assets/js/easytimer.js"></script>
@@ -344,13 +343,13 @@ $(document).ready(function() {
   
   $(' .stopButton').click(function () {
     timer.stop({precision: 'secondTenths'});
-    timer1.stop({precision: 'secondTenths'});$('#statusTimer1').val('1');$('#timer1').text('00:00:00:00');$("#startTimer1").attr("disabled","").html('Start');$("#pauseTimer1").attr("disabled", "");$("#stopTimer1").attr("disabled", "");
-    timer2.stop({precision: 'secondTenths'});$('#statusTimer2').val('1');$('#timer2').text('00:00:00:00');$("#startTimer2").attr("disabled","").html('Start');$("#pauseTimer2").attr("disabled", "");$("#stopTimer2").attr("disabled", "");
-    timer3.stop({precision: 'secondTenths'});$('#statusTimer3').val('1');$('#timer3').text('00:00:00:00');$("#startTimer3").attr("disabled","").html('Start');$("#pauseTimer3").attr("disabled", "");$("#stopTimer3").attr("disabled", "");
-    timer4.stop({precision: 'secondTenths'});$('#statusTimer4').val('1');$('#timer4').text('00:00:00:00');$("#startTimer4").attr("disabled","").html('Start');$("#pauseTimer4").attr("disabled", "");$("#stopTimer4").attr("disabled", "");
-    timer5.stop({precision: 'secondTenths'});$('#statusTimer5').val('1');$('#timer5').text('00:00:00:00');$("#startTimer5").attr("disabled","").html('Start');$("#pauseTimer5").attr("disabled", "");$("#stopTimer5").attr("disabled", "");
-    timer6.stop({precision: 'secondTenths'});$('#statusTimer6').val('1');$('#timer6').text('00:00:00:00');$("#startTimer6").attr("disabled","").html('Start');$("#pauseTimer6").attr("disabled", "");$("#stopTimer6").attr("disabled", "");
-    timer7.stop({precision: 'secondTenths'});$('#statusTimer7').val('1');$('#timer7').text('00:00:00:00');$("#startTimer7").attr("disabled","").html('Start');$("#pauseTimer7").attr("disabled", "");$("#stopTimer7").attr("disabled", "");
+    timer1.stop({precision: 'secondTenths'});$('#statusTimer1').val('1');$("#startTimer1").attr("disabled","").html('Start');$("#pauseTimer1").attr("disabled", "");$("#stopTimer1").attr("disabled", "");
+    timer2.stop({precision: 'secondTenths'});$('#statusTimer2').val('1');$("#startTimer2").attr("disabled","").html('Start');$("#pauseTimer2").attr("disabled", "");$("#stopTimer2").attr("disabled", "");
+    timer3.stop({precision: 'secondTenths'});$('#statusTimer3').val('1');$("#startTimer3").attr("disabled","").html('Start');$("#pauseTimer3").attr("disabled", "");$("#stopTimer3").attr("disabled", "");
+    timer4.stop({precision: 'secondTenths'});$('#statusTimer4').val('1');$("#startTimer4").attr("disabled","").html('Start');$("#pauseTimer4").attr("disabled", "");$("#stopTimer4").attr("disabled", "");
+    timer5.stop({precision: 'secondTenths'});$('#statusTimer5').val('1');$("#startTimer5").attr("disabled","").html('Start');$("#pauseTimer5").attr("disabled", "");$("#stopTimer5").attr("disabled", "");
+    timer6.stop({precision: 'secondTenths'});$('#statusTimer6').val('1');$("#startTimer6").attr("disabled","").html('Start');$("#pauseTimer6").attr("disabled", "");$("#stopTimer6").attr("disabled", "");
+    timer7.stop({precision: 'secondTenths'});$('#statusTimer7').val('1');$("#startTimer7").attr("disabled","").html('Start');$("#pauseTimer7").attr("disabled", "");$("#stopTimer7").attr("disabled", "");
   });
           
   $(' .resetButton').click(function () {
@@ -451,6 +450,9 @@ $(document).ready(function() {
   ///////////////////////// area timer2 ///////////////////////////
   $('#startTimer2').click(function () {
     timer2.start({precision: 'secondTenths'});
+    $("#pauseTimer2").removeAttr("disabled");
+    $("#stopTimer2").removeAttr("disabled");
+    $('#statusTimer2').val('1');
   });
 
   $('#pauseTimer2').click(function () {
@@ -458,11 +460,23 @@ $(document).ready(function() {
     $("#startTimer2").removeAttr("disabled");
   timer2.pause({precision: 'secondTenths'});
   });
+
+  $('#stopTimer2').click(function () {
+    $('#statusTimer2').val('0');
+    $("#startTimer2").removeAttr("disabled");
+    $("#startTimer2").html('Start');
+    $("#pauseTimer2").attr("disabled", "");
+    $("#stopTimer2").attr("disabled", "");
+    timer2.stop({precision: 'secondTenths'});
+  });
   ///////////////////////// ////////// ///////////////////////////
   
   ///////////////////////// area timer3 ///////////////////////////
   $('#startTimer3').click(function () {
     timer3.start({precision: 'secondTenths'});
+    $("#pauseTimer3").removeAttr("disabled");
+    $("#stopTimer3").removeAttr("disabled");
+    $('#statusTimer3').val('1');
   });
 
   $('#pauseTimer3').click(function () {
@@ -470,11 +484,32 @@ $(document).ready(function() {
     $("#startTimer3").removeAttr("disabled");
     timer3.pause({precision: 'secondTenths'});
   });
+
+  $('#stopTimer3').click(function () {
+    $('#statusTimer3').val('0');
+    $("#startTimer3").removeAttr("disabled");
+    $("#startTimer3").html('Start');
+    $("#pauseTimer3").attr("disabled", "");
+    $("#stopTimer3").attr("disabled", "");
+    timer3.stop({precision: 'secondTenths'});
+  });
   ///////////////////////// ////////// ///////////////////////////
   
   ///////////////////////// area timer4 ///////////////////////////
   $('#startTimer4').click(function () {
     timer4.start({precision: 'secondTenths'});
+    $("#pauseTimer4").removeAttr("disabled");
+    $("#stopTimer4").removeAttr("disabled");
+    $('#statusTimer4').val('1');
+  });
+
+  $('#stopTimer4').click(function () {
+    $('#statusTimer4').val('0');
+    $("#startTimer4").removeAttr("disabled");
+    $("#startTimer4").html('Start');
+    $("#pauseTimer4").attr("disabled", "");
+    $("#stopTimer4").attr("disabled", "");
+    timer4.stop({precision: 'secondTenths'});
   });
 
   $('#pauseTimer4').click(function () {
@@ -485,8 +520,21 @@ $(document).ready(function() {
   ///////////////////////// ////////// ///////////////////////////
   
   ///////////////////////// area timer5 ///////////////////////////
+  
   $('#startTimer5').click(function () {
     timer5.start({precision: 'secondTenths'});
+    $("#pauseTimer5").removeAttr("disabled");
+    $("#stopTimer5").removeAttr("disabled");
+    $('#statusTimer5').val('1');
+  });
+
+  $('#stopTimer5').click(function () {
+    $('#statusTimer5').val('0');
+    $("#startTimer5").removeAttr("disabled");
+    $("#startTimer5").html('Start');
+    $("#pauseTimer5").attr("disabled", "");
+    $("#stopTimer5").attr("disabled", "");
+    timer5.stop({precision: 'secondTenths'});
   });
 
   $('#pauseTimer5').click(function () {
@@ -499,6 +547,18 @@ $(document).ready(function() {
   ///////////////////////// area timer6 ///////////////////////////
   $('#startTimer6').click(function () {
     timer6.start({precision: 'secondTenths'});
+    $("#pauseTimer6").removeAttr("disabled");
+    $("#stopTimer6").removeAttr("disabled");
+    $('#statusTimer6').val('1');
+  });
+
+  $('#stopTimer6').click(function () {
+    $('#statusTimer6').val('0');
+    $("#startTimer6").removeAttr("disabled");
+    $("#startTimer6").html('Start');
+    $("#pauseTimer6").attr("disabled", "");
+    $("#stopTimer6").attr("disabled", "");
+    timer6.stop({precision: 'secondTenths'});
   });
 
   $('#pauseTimer6').click(function () {
@@ -511,6 +571,18 @@ $(document).ready(function() {
   ///////////////////////// area timer6 ///////////////////////////
   $('#startTimer7').click(function () {
     timer7.start({precision: 'secondTenths'});
+    $("#pauseTimer7").removeAttr("disabled");
+    $("#stopTimer7").removeAttr("disabled");
+    $('#statusTimer7').val('1');
+  });
+
+  $('#stopTimer7').click(function () {
+    $('#statusTimer7').val('0');
+    $("#startTimer7").removeAttr("disabled");
+    $("#startTimer7").html('Start');
+    $("#pauseTimer7").attr("disabled", "");
+    $("#stopTimer7").attr("disabled", "");
+    timer7.stop({precision: 'secondTenths'});
   });
 
   $('#pauseTimer7').click(function () {
