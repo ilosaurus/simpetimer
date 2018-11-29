@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="assets/js/easytimer.js"></script>
+      <script src="assets/js/examples.min.js"></script>
+      <link rel="icon" href="assets/images/logo_kbgi.png"/>
+      <title>KBGI-X 2018</title>
+   </head>
+   <body>
+      <div class="container-fluid  .no-gutters">
+         <br>
+         <div class="row">
+            <div class="col-md-12 col-lg-12">
+               <div class="bs-component">
+                  <div class="">
+                     <div class="row card-body card-category">
+                        <div class="row">
+                           <div class="col-md-3" >
+                              <!-- <img class="image-responsive" src="" alt=""> -->
+                              <!-- <img src="assets/images/logo_pnup.png" class="img-fluid" alt="Responsive image"> -->
+                           </div>
+                           <div class="col-md-1" >
+                              <!-- <img class="image-responsive" src="" alt=""> -->
+                              <img src="assets/images/logo_kbgi.png" class="img-fluid" alt="Responsive image">
+                           </div>
+                           <div class="col-md-4" >
+                               <center style="color:white"><h6>t</h6> </center>
+                              <center><h1>KBGI-X 2018</h1></center>
+                           </div>
+                           <div class="col-md-1" >
+                              <!-- <img class="image-responsive" src="" alt=""> -->
+                              <img src="assets/images/logo_ristedikti.png" class="img-fluid" alt="Responsive image">
+                           </div>
+                           <div class="col-md-3" >
+                              <!-- <img class="image-responsive" src="" alt=""> -->
+                              <!-- <img src="assets/images/logo_pnup.png" class="img-fluid" alt="Responsive image"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12 col-lg-12">
+               <div class="bs-component">
+                  <div class="card">
+                     <div class="row card-body card-category">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <center>
+                                    <h3 id="topTimer">
+                                       00:00:00:00
+                                    </h3>
+                                 </center>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <center>
+                                    <div class="center">
+                                       <button type="button" id="startButton"  class="btn btn-success startButton">Start All</button>
+                                       <button type="button"  id="pauseButton"  disabled class="btn btn-primary pauseButton">Pause All</button>
+                                       <button type="button" id="stopButton" disabled class="btn btn-danger stopButton">Stop All</button>
+                                       <button type="button" id="resetButton" disabled class="btn btn-warning  resetButton">Reset All</button>
+                                    </div>
+                                 </center>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <!--  Header Section  -->
+         <div class="row">
+            <div class="col-md-12 col-lg-12">
+               <div class="row">
+                  <div class="col-md-6">
+                        <div class="row">
+                                <div class="col-md-12">
+                                   <div class="bs-component">
+                                      <div class="card">
+                                         <!-- <h6 class="card-header" > <b>Nama Tim</b> </h6> -->
+                                         <div class="card-body card-category">
+                                            <div class="row">
+                                               <div class="border-right col-md-2" >
+                                                  <!-- <img class="image-responsive" src="" alt=""> -->
+                                                  <img src="assets/images/logo_pnup.png" class="img-fluid" alt="Responsive image">
+                                               </div>
+                                               <div class="col-md-10"  >
+                                                  <div  class="row align-items-center  justify-content-center">
+                                                     <div  class=" col-12 ">
+                                                        <h4 class="align-left" >PARAGA TEAM | Rumah Boyang</h4>
+                                                        <h4 class="align-left" >Politeknik Negeri Ujung Pandang</h4>
+                                                     </div>
+                                                  </div>
+                                                  <div  class="row align-items-center ">
+                                                     <div  class=" col-6 col-md-auto ">
+                                                            <h3 id="timer1" class="align-middle" >00:00:00:00</h3>
+                                                        </div>
+                                                        <div  class="col-6 col-md-auto ">
+                                                            <button id="startTimer1" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
+                                                            <button id="pauseTimer1" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                                            
+                                                        </div>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                     <br>
+                     <div class="row">
+                                <div class="col-md-12">
+                                   <div class="bs-component">
+                                      <div class="card">
+                                         <!-- <h6 class="card-header" > <b>Nama Tim</b> </h6> -->
+                                         <div class="card-body card-category">
+                                            <div class="row">
+                                               <div class="border-right col-md-2" >
+                                                  <!-- <img class="image-responsive" src="" alt=""> -->
+                                                  <img src="assets/images/logo_ubb.png" class="img-fluid" alt="Responsive image">
+                                               </div>
+                                               <div class="col-md-10"  >
+                                                  <div  class="row align-items-center  justify-content-center">
+                                                     <div  class=" col-12 ">
+                                                        <h4 class="align-left" >Tim HABUT BEHIREK | Rumah Junjung Besaoh</h4>
+                                                        <h4 class="align-left" >Universitas Bangka Belitung</h4>
+                                                     </div>
+                                                  </div>
+                                                  <div  class="row align-items-center ">
+                                                     <div  class=" col-6 col-md-auto ">
+                                                            <h3 id="timer2" class=" align-middle" >00:00:00:00</h3>
+                                                        </div>
+                                                        <div  class="col-6 col-md-auto ">
+                                                            <button id="startTimer2" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
+                                                            <button id="pauseTimer2" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                                            
+                                                        </div>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                     <br>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="bs-component">
+                              <div class="card">
+                                 <!-- <h6 class="card-header" > <b>Nama Tim</b> </h6> -->
+                                 <div class="card-body card-category">
+                                    <div class="row">
+                                       <div class="border-right col-md-2" >
+                                          <!-- <img class="image-responsive" src="" alt=""> -->
+                                          <img src="assets/images/logo_unjember.png" class="img-fluid" alt="Responsive image">
+                                       </div>
+                                       <div class="col-md-10"  >
+                                          <div  class="row align-items-center  justify-content-center">
+                                             <div  class=" col-12 ">
+                                                <h4 class="align-left" >Tim KBGI PADDAENGAN | Rumah Saoraja</h4>
+                                                <h4 class="align-left" >Universitas Jember</h4>
+                                             </div>
+                                          </div>
+                                          <div  class="row align-items-center ">
+                                             <div  class=" col-6 col-md-auto ">
+                                                    <h3 id="timer3" class=" align-middle" >00:00:00:00</h3>
+                                                </div>
+                                                <div  class="col-6 col-md-auto ">
+                                                    <button id="startTimer3" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
+                                                    <button id="pauseTimer3" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                                    
+                                                </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <br>
+                  </div>
+                  <div class="col-md-6">
+                        <div class="row">
+                                <div class="col-md-12">
+                                   <div class="bs-component">
+                                      <div class="card">
+                                         <!-- <h6 class="card-header" > <b>Nama Tim</b> </h6> -->
+                                         <div class="card-body card-category">
+                                            <div class="row">
+                                               <div class="border-right col-md-2" >
+                                                  <!-- <img class="image-responsive" src="" alt=""> -->
+                                                  <img src="assets/images/logo_umm.png" class="img-fluid" alt="Responsive image">
+                                               </div>
+                                               <div class="col-md-10"  >
+                                                  <div  class="row align-items-center  justify-content-center">
+                                                     <div  class=" col-12 ">
+                                                        <h4 class="align-left" >Tim KWANGWUNG | Graha Semar Kawung</h4>
+                                                        <h4 class="align-left" >Universitas Muhammadiyah Malang</h4>
+                                                     </div>
+                                                  </div>
+                                                  <div  class="row align-items-center ">
+                                                     <div  class=" col-6 col-md-auto ">
+                                                            <h3 id="timer5" class=" align-middle" >00:00:00:00</h3>
+                                                            </div>
+                                                            <div  class="col-6 col-md-auto ">
+                                                                <button id="startTimer5" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
+                                                                <button id="pauseTimer5" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                                                
+                                                            </div>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                     <br>
+                     <div class="row">
+                            <div class="col-md-12">
+                               <div class="bs-component">
+                                  <div class="card">
+                                     <!-- <h6 class="card-header" > <b>Nama Tim</b> </h6> -->
+                                     <div class="card-body card-category">
+                                        <div class="row">
+                                           <div class="border-right col-md-2" >
+                                              <!-- <img class="image-responsive" src="" alt=""> -->
+                                              <img src="assets/images/logo_uns.png" class="img-fluid" alt="Responsive image">
+                                           </div>
+                                           <div class="col-md-10"  >
+                                              <div  class="row align-items-center  justify-content-center">
+                                                 <div  class=" col-12 ">
+                                                    <h4 class="align-left" >Tim SUNRISE| Romin Rieya</h4>
+                                                    <h4 class="align-left" >Universitas Negeri Surabaya</h4>
+                                                 </div>
+                                              </div>
+                                              <div  class="row align-items-center ">
+                                                 <div  class=" col-6 col-md-auto ">
+                                                        <h3 id="timer4" class=" align-middle" >00:00:00:00</h3>
+                                                            </div>
+                                                            <div  class="col-6 col-md-auto ">
+                                                                <button id="startTimer4" type="button" disabled class="btn btn-md btn-success">Start</button>  &nbsp;
+                                                                <button id="pauseTimer4" type="button" class="btn btn-md btn-primary">Pause</button>  &nbsp;
+                                                                
+                                                            </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                  </div>
+               </div>
+               <br>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+<script>
+   $(document).ready(function() {
+   	var timer = new Timer();
+   	var timer1 = new Timer();
+   	var timer2 = new Timer();
+   	var timer3 = new Timer();
+   	var timer4 = new Timer();
+   	var timer5 = new Timer();
+   	var timer6 = new Timer();
+   	var timer7 = new Timer();
+   
+   	$(' .startButton').click(function() {
+              //$('pauseButton').prop('disabled', false);
+              
+   
+   		$("#pauseButton").removeAttr("disabled");
+   		$("#stopButton").removeAttr("disabled");
+   		$("#resetButton").removeAttr("disabled");
+   
+   		timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer2.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   		timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: 10800}});
+   
+   	});
+   
+   
+   	$(' .pauseButton').click(function () {
+              $("#startButton").html('Resume All');
+   		timer.pause({precision: 'secondTenths'});
+   		timer1.pause({precision: 'secondTenths'});
+   		timer2.pause({precision: 'secondTenths'});
+   		timer3.pause({precision: 'secondTenths'});
+   		timer4.pause({precision: 'secondTenths'});
+   		timer5.pause({precision: 'secondTenths'});
+   		timer6.pause({precision: 'secondTenths'});
+   		timer7.pause({precision: 'secondTenths'});
+          });
+          
+   
+   	$(' .stopButton').click(function () {
+              timer.stop({precision: 'secondTenths'});
+              timer1.stop({precision: 'secondTenths'});
+   		timer2.stop({precision: 'secondTenths'});
+   		timer3.stop({precision: 'secondTenths'});
+   		timer4.stop({precision: 'secondTenths'});
+   		timer5.stop({precision: 'secondTenths'});
+   		timer6.stop({precision: 'secondTenths'});
+   		timer7.stop({precision: 'secondTenths'});
+          });
+          
+   	$(' .resetButton').click(function () {
+              location.reload();
+   
+             // timer.reset({precision: 'secondTenths'});
+             // timer1.reset({precision: 'secondTenths'});
+   	//	timer2.reset({precision: 'secondTenths'});
+   	//	timer3.reset({precision: 'secondTenths'});
+   		//timer4.reset({precision: 'secondTenths'});
+   		//timer5.reset({precision: 'secondTenths'});
+   		//timer6.reset({precision: 'secondTenths'});
+   		//timer7.reset({precision: 'secondTenths'});
+   	});
+   
+   	/////////////////////////////////         Start section   ////////////////////////////////////////
+   
+   	timer.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+          });
+          
+   	timer1.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+          });
+          
+   	timer2.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   
+   	timer3.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+          });
+          
+   	timer4.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+          
+          timer5.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+          
+          timer6.addEventListener('secondTenthsUpdated', function (e) {
+   		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+       timer7.addEventListener('secondTenthsUpdated', function (e) {
+			$('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+		});
+   	
+   	/////////////////////////////////         Start section   ////////////////////////////////////////
+   
+   
+   	timer.addEventListener('started', function (e) {
+   		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   
+   	timer1.addEventListener('started', function (e) {
+   		$('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   	timer2.addEventListener('started', function (e) {
+   		$('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   	timer3.addEventListener('started', function (e) {
+   		$('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   	timer4.addEventListener('started', function (e) {
+   		$('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   	timer5.addEventListener('started', function (e) {
+   		$('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+   	timer6.addEventListener('started', function (e) {
+   		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   	});
+       timer7.addEventListener('started', function (e) {
+			$('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+		});
+   
+   
+   
+   
+   	timer.addEventListener('reset', function (e) {
+   		//$('#topTimer .values').html(timer.getTimeValues().toString());
+   		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+   
+          });
+          
+   
+          function start(){
+              
+          }
+   
+   
+          ///////////////////////// area timer1 ///////////////////////////
+          $('#startTimer1').click(function () {
+   		timer1.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer1').click(function () {
+              $("#startTimer1").html('Resume');
+              $("#startTimer1").removeAttr("disabled");
+   		timer1.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+   
+          ///////////////////////// area timer2 ///////////////////////////
+          $('#startTimer2').click(function () {
+   		timer2.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer2').click(function () {
+              $("#startTimer2").html('Resume');
+              $("#startTimer2").removeAttr("disabled");
+   		timer2.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+   
+   
+          ///////////////////////// area timer3 ///////////////////////////
+          $('#startTimer3').click(function () {
+   		timer3.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer3').click(function () {
+              $("#startTimer3").html('Resume');
+              $("#startTimer3").removeAttr("disabled");
+   		timer3.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+   
+          ///////////////////////// area timer4 ///////////////////////////
+          $('#startTimer4').click(function () {
+              timer4.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer4').click(function () {
+              $("#startTimer4").html('Resume');
+              $("#startTimer4").removeAttr("disabled");
+              timer4.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+   
+           ///////////////////////// area timer5 ///////////////////////////
+           $('#startTimer5').click(function () {
+   		timer5.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer5').click(function () {
+              $("#startTimer5").html('Resume');
+              $("#startTimer5").removeAttr("disabled");
+   		timer5.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+   
+           ///////////////////////// area timer6 ///////////////////////////
+           $('#startTimer6').click(function () {
+   		timer6.start({precision: 'secondTenths'});
+          });
+   
+          $('#pauseTimer6').click(function () {
+              $("#startTimer6").html('Resume');
+              $("#startTimer6").removeAttr("disabled");
+   		timer6.pause({precision: 'secondTenths'});
+          });
+          ///////////////////////// ////////// ///////////////////////////
+//
+        ///////////////////////// area timer6 ///////////////////////////
+        $('#startTimer7').click(function () {
+            timer7.start({precision: 'secondTenths'});
+        });
+
+        $('#pauseTimer7').click(function () {
+            $("#startTimer7").html('Resume');
+            $("#startTimer7").removeAttr("disabled");
+            timer7.pause({precision: 'secondTenths'});
+        });
+        /////
+   });
+      
+      
+</script>
