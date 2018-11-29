@@ -288,234 +288,237 @@
   </body>
 </html>
 <script>
-  $(document).ready(function() {
-    var maxcount = 10800; //satuan detik
-  	var timer = new Timer();
-  	var timer1 = new Timer();
-  	var timer2 = new Timer();
-  	var timer3 = new Timer();
-  	var timer4 = new Timer();
-  	var timer5 = new Timer();
-  	var timer6 = new Timer();
-  	var timer7 = new Timer();
+$(document).ready(function() {
+  var maxcount = 10800; //satuan detik
+  var timer = new Timer();
+  var timer1 = new Timer();
+  var timer2 = new Timer();
+  var timer3 = new Timer();
+  var timer4 = new Timer();
+  var timer5 = new Timer();
+  var timer6 = new Timer();
+  var timer7 = new Timer();
   
-  	$(' .startButton').click(function() {
-             //$('pauseButton').prop('disabled', false);
-             
-  
-  		$("#pauseButton").removeAttr("disabled");
-  		$("#stopButton").removeAttr("disabled");
-  		$("#resetButton").removeAttr("disabled");
-  
-  		timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-      
-      if($('#statusTimer1').val() == 1){
-        timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-      }
+  $(' .startButton').click(function() {
+    $("#pauseButton").removeAttr("disabled");
+    $("#stopButton").removeAttr("disabled");
+    $("#resetButton").removeAttr("disabled");
 
+    timer.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    if($('#statusTimer1').val() == 1){
+      timer1.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer2').val() == 2){
       timer2.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-  		timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-  		timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-  		timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-  		timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
-  		timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer3').val() == 3){
+      timer3.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer4').val() == 4){
+      timer4.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer5').val() == 5){
+      timer5.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer6').val() == 6){
+      timer6.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+    if($('#statusTimer7').val() == 7){
+      timer7.start({precision: 'secondTenths', startValues: {seconds: 0}, target: {seconds: maxcount}});
+    }
+  });
   
-  	});
   
-  
-  	$(' .pauseButton').click(function () {
-             $("#startButton").html('Resume All');
-  		timer.pause({precision: 'secondTenths'});
-  		timer1.pause({precision: 'secondTenths'});
-  		timer2.pause({precision: 'secondTenths'});
-  		timer3.pause({precision: 'secondTenths'});
-  		timer4.pause({precision: 'secondTenths'});
-  		timer5.pause({precision: 'secondTenths'});
-  		timer6.pause({precision: 'secondTenths'});
-  		timer7.pause({precision: 'secondTenths'});
-         });
+  $(' .pauseButton').click(function () {
+    $("#startButton").html('Resume All');
+    timer.pause({precision: 'secondTenths'});
+    timer1.pause({precision: 'secondTenths'});
+    timer2.pause({precision: 'secondTenths'});
+    timer3.pause({precision: 'secondTenths'});
+    timer4.pause({precision: 'secondTenths'});
+    timer5.pause({precision: 'secondTenths'});
+    timer6.pause({precision: 'secondTenths'});
+    timer7.pause({precision: 'secondTenths'});
+  });
          
   
   $(' .stopButton').click(function () {
     timer.stop({precision: 'secondTenths'});
-    timer1.stop({precision: 'secondTenths'});$('#statusTimer1').val('1');
-    timer2.stop({precision: 'secondTenths'});$('#statusTimer2').val('1');
-    timer3.stop({precision: 'secondTenths'});$('#statusTimer3').val('1');
-    timer4.stop({precision: 'secondTenths'});$('#statusTimer4').val('1');
-    timer5.stop({precision: 'secondTenths'});$('#statusTimer5').val('1');
-    timer6.stop({precision: 'secondTenths'});$('#statusTimer6').val('1');
-    timer7.stop({precision: 'secondTenths'});$('#statusTimer7').val('1');
+    timer1.stop({precision: 'secondTenths'});$('#statusTimer1').val('1');$('#timer1').text('00:00:00:00');$("#startTimer1").attr("disabled","").html('Start');$("#pauseTimer1").attr("disabled", "");$("#stopTimer1").attr("disabled", "");
+    timer2.stop({precision: 'secondTenths'});$('#statusTimer2').val('1');$('#timer2').text('00:00:00:00');$("#startTimer2").attr("disabled","").html('Start');$("#pauseTimer2").attr("disabled", "");$("#stopTimer2").attr("disabled", "");
+    timer3.stop({precision: 'secondTenths'});$('#statusTimer3').val('1');$('#timer3').text('00:00:00:00');$("#startTimer3").attr("disabled","").html('Start');$("#pauseTimer3").attr("disabled", "");$("#stopTimer3").attr("disabled", "");
+    timer4.stop({precision: 'secondTenths'});$('#statusTimer4').val('1');$('#timer4').text('00:00:00:00');$("#startTimer4").attr("disabled","").html('Start');$("#pauseTimer4").attr("disabled", "");$("#stopTimer4").attr("disabled", "");
+    timer5.stop({precision: 'secondTenths'});$('#statusTimer5').val('1');$('#timer5').text('00:00:00:00');$("#startTimer5").attr("disabled","").html('Start');$("#pauseTimer5").attr("disabled", "");$("#stopTimer5").attr("disabled", "");
+    timer6.stop({precision: 'secondTenths'});$('#statusTimer6').val('1');$('#timer6').text('00:00:00:00');$("#startTimer6").attr("disabled","").html('Start');$("#pauseTimer6").attr("disabled", "");$("#stopTimer6").attr("disabled", "");
+    timer7.stop({precision: 'secondTenths'});$('#statusTimer7').val('1');$('#timer7').text('00:00:00:00');$("#startTimer7").attr("disabled","").html('Start');$("#pauseTimer7").attr("disabled", "");$("#stopTimer7").attr("disabled", "");
   });
-         
+          
   $(' .resetButton').click(function () {
     location.reload();
   });
   
-  	/////////////////////////////////         Start section   ////////////////////////////////////////
-  
-  	timer.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-         });
-         
-  	timer1.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-         });
-         
-  	timer2.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  
-  	timer3.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-         });
-         
-  	timer4.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-         
-    timer5.addEventListener('secondTenthsUpdated', function (e) {
-      $('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-    });
-         
-    timer6.addEventListener('secondTenthsUpdated', function (e) {
-  		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-    });
-    
-    timer7.addEventListener('secondTenthsUpdated', function (e) {
-      $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-    });
-  	
-  	/////////////////////////////////         Start section   ////////////////////////////////////////
-  
-  
-  	timer.addEventListener('started', function (e) {
-  		$('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  
-  	timer1.addEventListener('started', function (e) {
-  		$('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  	timer2.addEventListener('started', function (e) {
-  		$('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  	timer3.addEventListener('started', function (e) {
-  		$('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  	timer4.addEventListener('started', function (e) {
-  		$('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  	timer5.addEventListener('started', function (e) {
-  		$('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-  	timer6.addEventListener('started', function (e) {
-  		$('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-  	});
-    timer7.addEventListener('started', function (e) {
-      $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-    });
-
-  	timer.addEventListener('reset', function (e) {
-      $('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
-    });
-
-  
-    ///////////////////////// area timer1 ///////////////////////////
-    $('#startTimer1').click(function () {
-      timer1.start({precision: 'secondTenths'});
-      $("#pauseTimer1").removeAttr("disabled");
-      $("#stopTimer1").removeAttr("disabled");
-      $('#statusTimer1').val('1');
-    });
-
-    $('#pauseTimer1').click(function () {
-      $("#startTimer1").html('Resume');
-      $("#startTimer1").removeAttr("disabled");
-      timer1.pause({precision: 'secondTenths'});
-    });
-
-    $('#stopTimer1').click(function () {
-      $('#statusTimer1').val('0');
-      $("#startTimer1").removeAttr("disabled");
-      $("#startTimer1").html('Start');
-      $("#pauseTimer1").attr("disabled", "");
-      $("#stopTimer1").attr("disabled", "");
-      timer1.stop({precision: 'secondTenths'});
-    });
-    ///////////////////////// ////////// ///////////////////////////
-  
-         ///////////////////////// area timer2 ///////////////////////////
-         $('#startTimer2').click(function () {
-  		timer2.start({precision: 'secondTenths'});
-         });
-  
-         $('#pauseTimer2').click(function () {
-             $("#startTimer2").html('Resume');
-             $("#startTimer2").removeAttr("disabled");
-  		timer2.pause({precision: 'secondTenths'});
-         });
-         ///////////////////////// ////////// ///////////////////////////
-  
-  
-         ///////////////////////// area timer3 ///////////////////////////
-         $('#startTimer3').click(function () {
-  		timer3.start({precision: 'secondTenths'});
-         });
-  
-         $('#pauseTimer3').click(function () {
-             $("#startTimer3").html('Resume');
-             $("#startTimer3").removeAttr("disabled");
-  		timer3.pause({precision: 'secondTenths'});
-         });
-         ///////////////////////// ////////// ///////////////////////////
-  
-         ///////////////////////// area timer4 ///////////////////////////
-         $('#startTimer4').click(function () {
-             timer4.start({precision: 'secondTenths'});
-         });
-  
-         $('#pauseTimer4').click(function () {
-             $("#startTimer4").html('Resume');
-             $("#startTimer4").removeAttr("disabled");
-             timer4.pause({precision: 'secondTenths'});
-         });
-         ///////////////////////// ////////// ///////////////////////////
-  
-          ///////////////////////// area timer5 ///////////////////////////
-          $('#startTimer5').click(function () {
-  		timer5.start({precision: 'secondTenths'});
-         });
-  
-         $('#pauseTimer5').click(function () {
-             $("#startTimer5").html('Resume');
-             $("#startTimer5").removeAttr("disabled");
-  		timer5.pause({precision: 'secondTenths'});
-         });
-         ///////////////////////// ////////// ///////////////////////////
-  
-          ///////////////////////// area timer6 ///////////////////////////
-          $('#startTimer6').click(function () {
-  		timer6.start({precision: 'secondTenths'});
-         });
-  
-         $('#pauseTimer6').click(function () {
-             $("#startTimer6").html('Resume');
-             $("#startTimer6").removeAttr("disabled");
-  		timer6.pause({precision: 'secondTenths'});
-         });
-         ///////////////////////// ////////// ///////////////////////////
-  //
-       ///////////////////////// area timer6 ///////////////////////////
-       $('#startTimer7').click(function () {
-           timer7.start({precision: 'secondTenths'});
-       });
-  
-       $('#pauseTimer7').click(function () {
-           $("#startTimer7").html('Resume');
-           $("#startTimer7").removeAttr("disabled");
-           timer7.pause({precision: 'secondTenths'});
-       });
-       /////
+  /////////////////////////////////         Start section   ////////////////////////////////////////
+  timer.addEventListener('secondTenthsUpdated', function (e) {
+    $('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
   });
-     
-     
+        
+  timer1.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+        
+  timer2.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+
+  timer3.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+        
+  timer4.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+        
+  timer5.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+        
+  timer6.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  
+  timer7.addEventListener('secondTenthsUpdated', function (e) {
+    $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  
+  /////////////////////////////////         Start section   ////////////////////////////////////////
+
+
+  timer.addEventListener('started', function (e) {
+    $('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+
+  timer1.addEventListener('started', function (e) {
+    $('#timer1').html(timer1.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer2.addEventListener('started', function (e) {
+    $('#timer2').html(timer2.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer3.addEventListener('started', function (e) {
+    $('#timer3').html(timer3.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer4.addEventListener('started', function (e) {
+    $('#timer4').html(timer4.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer5.addEventListener('started', function (e) {
+    $('#timer5').html(timer5.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer6.addEventListener('started', function (e) {
+    $('#timer6').html(timer6.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+  timer7.addEventListener('started', function (e) {
+    $('#timer7').html(timer7.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+
+  timer.addEventListener('reset', function (e) {
+    $('#topTimer').html(timer.getTimeValues().toString(['hours', 'minutes', 'seconds', 'secondTenths']));
+  });
+
+  
+  ///////////////////////// area timer1 ///////////////////////////
+  $('#startTimer1').click(function () {
+    timer1.start({precision: 'secondTenths'});
+    $("#pauseTimer1").removeAttr("disabled");
+    $("#stopTimer1").removeAttr("disabled");
+    $('#statusTimer1').val('1');
+  });
+
+  $('#pauseTimer1').click(function () {
+    $("#startTimer1").html('Resume');
+    $("#startTimer1").removeAttr("disabled");
+    timer1.pause({precision: 'secondTenths'});
+  });
+
+  $('#stopTimer1').click(function () {
+    $('#statusTimer1').val('0');
+    $("#startTimer1").removeAttr("disabled");
+    $("#startTimer1").html('Start');
+    $("#pauseTimer1").attr("disabled", "");
+    $("#stopTimer1").attr("disabled", "");
+    timer1.stop({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+  
+  ///////////////////////// area timer2 ///////////////////////////
+  $('#startTimer2').click(function () {
+    timer2.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer2').click(function () {
+    $("#startTimer2").html('Resume');
+    $("#startTimer2").removeAttr("disabled");
+  timer2.pause({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+  
+  ///////////////////////// area timer3 ///////////////////////////
+  $('#startTimer3').click(function () {
+    timer3.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer3').click(function () {
+    $("#startTimer3").html('Resume');
+    $("#startTimer3").removeAttr("disabled");
+    timer3.pause({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+  
+  ///////////////////////// area timer4 ///////////////////////////
+  $('#startTimer4').click(function () {
+    timer4.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer4').click(function () {
+    $("#startTimer4").html('Resume');
+    $("#startTimer4").removeAttr("disabled");
+    timer4.pause({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+  
+  ///////////////////////// area timer5 ///////////////////////////
+  $('#startTimer5').click(function () {
+    timer5.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer5').click(function () {
+    $("#startTimer5").html('Resume');
+    $("#startTimer5").removeAttr("disabled");
+    timer5.pause({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+
+  ///////////////////////// area timer6 ///////////////////////////
+  $('#startTimer6').click(function () {
+    timer6.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer6').click(function () {
+    $("#startTimer6").html('Resume');
+    $("#startTimer6").removeAttr("disabled");
+    timer6.pause({precision: 'secondTenths'});
+  });
+  ///////////////////////// ////////// ///////////////////////////
+  
+  ///////////////////////// area timer6 ///////////////////////////
+  $('#startTimer7').click(function () {
+    timer7.start({precision: 'secondTenths'});
+  });
+
+  $('#pauseTimer7').click(function () {
+    $("#startTimer7").html('Resume');
+    $("#startTimer7").removeAttr("disabled");
+    timer7.pause({precision: 'secondTenths'});
+  });
+  /////
+});
+         
 </script>
